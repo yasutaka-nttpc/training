@@ -17,9 +17,15 @@
 
 
 ○環境・ツール
+基本的に最新バージョンを使用する(2017/12/24時点)
 ruby 2.5.0-rc1
-rails 4.2.10
+rails 5.1.4
 mariadb ※
 postfix ※ (アプリと同サーバに入れsmtpサーバとして利用する)
 
 ※パッケージ管理システムで入る最新版を使用
+
+
+ベンダー保守情報管理システム
+Vender maintenance information management system
+VMIMS
