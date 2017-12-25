@@ -36,3 +36,4 @@ $ rails db
 
 あと他のdb作ってview作る
 コントローラも作る
+https://qiita.com/publichtml/items/1fba15d8071fab66d043
