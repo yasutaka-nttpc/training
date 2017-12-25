@@ -1,0 +1,38 @@
+VMIMS開発
+
+$ ruby --version
+ruby 2.5.0rc1 (2017-12-14 trunk 61243) [x86_64-darwin17]
+$ bundler --version
+Bundler version 1.16.1
+$ rails --version
+Rails 5.1.4
+$ mysql --version
+mysql  Ver 15.1 Distrib 10.2.11-MariaDB, for osx10.13 (x86_64) using readline 5.1
+$ gem list mysql2
+mysql2 (0.4.10)
+
+
+$ sudo mysql_install_db
+U.
+
+$ rails new VMIMS -d mysql
+
+
+========================================
+
+・informationコントローラ作成
+$ rails g controller information index
+
+・informationモデル作成
+$ rails g model information
+
+・dbの作成と舞グレート
+$ rake db:create
+$ rake db:migrate
+
+・dbにログイン
+$ rails db
+
+
+あと他のdb作ってview作る
+コントローラも作る
