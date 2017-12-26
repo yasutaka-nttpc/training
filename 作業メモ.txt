@@ -33,6 +33,24 @@ $ rake db:migrate
 ・dbにログイン
 $ rails db
 
+・カラム名確認
+$ rails c
+irb(main):006:0> Information.column_names
+=> ["id", "created_at", "updated_at", "group", "service", "category", "environment", "name", "serial", "server_name", "support_contact", "support_contact_period", "support_id", "hard_support_conditions", "hard_contact_tel", "hard_contact_mail", "hard_contact_other", "soft_support_conditions", "soft_contact_tel", "soft_contact_mail", "soft_contact_other", "os_version", "eos_hard", "eos_soft", "sales_contact", "sales_contact_tel", "sales_contact_mail", "remarks_1", "remarks_2", "remarks_3", "non_alert_flag"]
+irb(main):007:0> Service.column_names
+=> ["id", "name", "alert_mailaddr"]
+irb(main):008:0> Group.column_names
+=> ["id", "name", "alert_mailaddr"]
+irb(main):009:0> Category.column_names
+=> ["id", "name"]
+irb(main):010:0> Environment.column_names
+=> ["id", "name"]
+
+
+$ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop && rake db:create && rake db:migrate && rake db:schema:dump
+
+use VMIMS_development; show create table services;
+
 
 あと他のdb作ってview作る
 コントローラも作る
