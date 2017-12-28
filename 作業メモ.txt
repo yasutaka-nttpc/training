@@ -8,12 +8,18 @@ $ rails --version
 Rails 5.1.4
 $ mysql --version
 mysql  Ver 15.1 Distrib 10.2.11-MariaDB, for osx10.13 (x86_64) using readline 5.1
+★mariadbに変えてもソケットのパスだけちゃんとしたらそのまま動く
 $ gem list mysql2
 mysql2 (0.4.10)
 
+# nginx -v
+nginx version: nginx/1.12.2
+# gem list puma
+puma (3.11.0)
+
 
 $ sudo mysql_install_db
-U.
+hf0
 
 $ rails new VMIMS -d mysql
 
@@ -26,7 +32,7 @@ $ rails g controller information index
 ・informationモデル作成
 $ rails g model information
 
-・dbの作成と舞グレート
+・dbの作成とマイグレート
 $ rake db:create
 $ rake db:migrate
 
@@ -52,6 +58,6 @@ $ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop && rake db:create && rake db
 use VMIMS_development; show create table services;
 
 
-あと他のdb作ってview作る
-コントローラも作る
-https://qiita.com/publichtml/items/1fba15d8071fab66d043
+
+[root@ip-172-31-27-88 VMIMS]# systemctl status firewalld
+[root@ip-172-31-27-88 VMIMS]# puma -w 4
