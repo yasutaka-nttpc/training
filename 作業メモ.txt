@@ -57,7 +57,12 @@ $ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop && rake db:create && rake db
 
 use VMIMS_development; show create table services;
 
+add_foreign_keyが正常に動かないのでアプリ側で対応する
+
+$ ssh -i /Users/timu/workspace/ruby_on_rails/VMIMS-key.pem centos@13.230.82.79
+
 
 
 [root@ip-172-31-27-88 VMIMS]# systemctl status firewalld
 [root@ip-172-31-27-88 VMIMS]# puma -w 4
+
