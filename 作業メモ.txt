@@ -1,7 +1,7 @@
 VMIMS開発
 
 $ ruby --version
-ruby 2.5.0rc1 (2017-12-14 trunk 61243) [x86_64-darwin17]
+ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-darwin17]
 $ bundler --version
 Bundler version 1.16.1
 $ rails --version
@@ -32,7 +32,7 @@ $ rails g controller information index
 ・informationモデル作成
 $ rails g model information
 
-・dbの作成とマイグレート
+・dbの作成と舞グレート
 $ rake db:create
 $ rake db:migrate
 
@@ -65,4 +65,6 @@ $ ssh -i /Users/timu/workspace/ruby_on_rails/VMIMS-key.pem centos@13.230.82.79
 
 [root@ip-172-31-27-88 VMIMS]# systemctl status firewalld
 [root@ip-172-31-27-88 VMIMS]# puma -w 4
+
+グローバルアクセスできることまで確認
 
