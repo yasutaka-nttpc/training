@@ -68,3 +68,5 @@ $ ssh -i /Users/timu/workspace/ruby_on_rails/VMIMS-key.pem centos@13.230.82.79
 
 グローバルアクセスできることまで確認
 
+
+$ DISABLE_DATABASE_ENVIRONMENT_CHECK=1 rake db:drop RAILS_ENV=production && rake db:create RAILS_ENV=production && rake db:migrate RAILS_ENV=production && rake db:schema:dump RAILS_ENV=production
